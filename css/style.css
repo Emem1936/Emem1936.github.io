@@ -1,0 +1,36 @@
+/** CTA **/
+#bottom-cta {
+    padding: 50px 0;
+}
+
+#bottom-cta h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 2px;
+}
+
+#bottom-cta p {
+    color: #fff;
+    padding-right: 70px;
+}
+
+#bottom-cta a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    background: #5cc6d0;
+    padding: 10px 28px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+#bottom-cta .container {
+    background: url(cta-bg.jpg);
+    padding: 42px 60px 56px;
+    background-size: cover;
+}
+
+#bottom-cta .col-1-4 {
+    text-align: right;
+    padding-top: 30px;
+}
