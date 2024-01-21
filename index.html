@@ -21,7 +21,7 @@
       </style>
     </noscript>
   </head>
-  <body id="top">
+  <body id="top" onload="updateAge()">
     <header>
       <div class="profile-page sidebar-collapse">
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
@@ -76,11 +76,12 @@
                   <div class="h4 mt-0 title">Basic Information</div>
                   <div class="row">
                     <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-                    <div class="col-sm-8">27 years old</div>
+                    <div class="col-sm-8"><p id="age"></p></div>
                   </div>
                   <div class="row mt-3">
                     <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                    <div class="col-sm-8">markjoseph.ambion.w@gmail.com</div>
+                    <div class="col-sm-8"><a href="mailto:markjoseph.ambion.w@gmail.com">markjoseph.ambion.w@gmail.com</a></div>
+                    
                   </div>
                   <div class="row mt-3">
                     <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
@@ -297,7 +298,7 @@
             <div class="row">
               <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
                 <div class="card-body cc-education-header">
-                  <div class="h5"><b>IT Support / Admin Staff</b></div>
+                  <div class="h5"><b>IT Specialist / Admin Staff</b></div>
                   <p>MAY 2016 - JULY 2017</p>
                 </div>
               </div>
@@ -995,5 +996,15 @@
     <script src="js/now-ui-kit.js?ver=1.1.0"></script>
     <script src="js/aos.js?ver=1.1.0"></script>
     <script src="scripts/main.js?ver=1.1.0"></script>
+    <script>
+      function updateAge() {
+          const birthdate = new Date("1996-03-19");
+          const currentDate = new Date();
+          const age = Math.floor((currentDate - birthdate) / (365.25 * 24 * 60 * 60 * 1000));
+  
+          // Corrected line: Use backticks (`) for template literals
+          document.getElementById('age').innerText = `${age} years old`;
+      }
+    </script>
   </body>
 </html>
