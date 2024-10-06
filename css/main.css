@@ -5311,3 +5311,8 @@ a.credit {
   text-align: right;
   padding-top: 30px;
 }
+
+#education {
+  display: block; /* or whatever default state you want */
+}
+

@@ -11,6 +11,27 @@
     <link href="css/bootstrap.min.css?ver=1.1.0" rel="stylesheet">
     <link href="css/main.css?ver=1.1.0" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      .toggle-details {
+        cursor: pointer;
+        color: #007BFF;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Aligning to the right */
+      }
+      .toggle-details i {
+        margin-left: 5px;
+      }
+      .details-content {
+        display: none; /* Initially hidden */
+        margin-top: 10px;
+      }
+      .toggle-container {
+        text-align: right; /* Position the toggle button to the right */
+      }
+    </style>
 </svg>
     <noscript>
       <style type="text/css">
@@ -48,166 +69,74 @@
     
     <div class="page-content">
       <div><!-- Profile Banner -->
-      <div class="profile-page">
-        <div class="wrapper">
-          <div class="page-header page-header-small" filter-color="green">
-            <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg')"></div>
-            <div class="container">
-              <div class="content-center">
-                
-                <div class="cc-profile-image">
-                  <a href="#"><img src="images/Emjhay.png" alt="Image"/></a>
-                </div>
-                <div class="h2 title">Mark Joseph Ambion</div>
-                <p class="category text-white">I'm a Bachelor of Science in Computer Science graduate from Cavite State University<br>and also a Computer Technician graduate in Imus Computer College</p>
-                <a class="btn btn-primary smooth-scroll mr-2" href="#about" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">About Me</a>
-                <a class="btn btn-primary" href="images/MJDA_CV.pdf" target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Resume</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Basic Info -->
-      <div class="section" id="about">
-        <div class="container">
-          <div class="card" data-aos="fade-up" data-aos-offset="10">
-            <div class="row">
-              <div class="col-lg-6 col-md-12">
-                <div class="card-body">
-                  <div class="h4 mt-0 title">Basic Information</div>
-                  <div class="row">
-                    <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-                    <div class="col-sm-8"><p id="age"></p></div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                    <div class="col-sm-8"><a href="mailto:mjdambion@gmail.com">mjdambion@gmail.com</a></div>
-                    
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
-                    <div class="col-sm-8">09455841223</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
-                    <div class="col-sm-8">Talon, Amadeo, Cavite</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Education:</strong></div>
-                    <div class="col-sm-8">Bachelor</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Facebook Page:</strong></div>
-                    <div class="col-sm-8"><a href="https://www.facebook.com/Mr.Penguin36" target="_blank">https://www.facebook.com/Mr.Penguin36</a></div>
-                  </div>
+        <div class="profile-page">
+          <div class="wrapper">
+            <div class="page-header page-header-small" filter-color="green">
+              <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg')"></div>
+              <div class="container">
+                <div class="content-center">
                   
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-md-12">
-                <div class="card-body">
-                  <div class="h4 mt-0 title">Motto</div>
-                  <div class="row">
-                    <div class="col-sm-12">Don't be afraid to fail. Because failure is the best ingredient for success.</div>
-                  </div><br>
-                  <div class="h4 mt-0 title">Favorite Quote</div>
-                  <div class="row">
-                    <div class="col-sm-12">Those who do not understand true pain, <br> Can never understand TRUE PEACE <br>~ Pain</div>
-                  </div><br>
-                  <div class="h4 mt-0 title">Hobby</div>
-                  <div class="row">
-                    <div class="col-sm-12">Playing Online Game, Watching Movies, Repairing Desktop/Laptop.</div>
+                  <div class="cc-profile-image">
+                    <a href="#"><img src="images/Emjhay.png" alt="Image"/></a>
                   </div>
+                  <div class="h2 title">Mark Joseph Ambion</div>
+                  <p class="category text-white">I'm a Bachelor of Science in Computer Science graduate from Cavite State University<br>and also a Computer Technician graduate in Imus Computer College</p>
+                  <a class="btn btn-primary smooth-scroll mr-2" href="#about" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">About Me</a>
+                  <a class="btn btn-primary" href="images/MJDA_CV.pdf" target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Resume</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Skills -->
-      <div class="section" id="skill">
-        <div class="container">
-          <div class="h4 text-center mb-4 title">Skills</div>
-          <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <div class="card-body">
+        <!-- Basic Info -->
+        <div class="section" id="about">
+          <div class="container">
+            <div class="card" data-aos="fade-up" data-aos-offset="10">
               <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Hardware and Software Troubleshooting and Repair</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div><span class="progress-value"></span>
+                <div class="col-lg-6 col-md-12">
+                  <div class="card-body">
+                    <div class="h4 mt-0 title">Basic Information</div>
+                    <div class="row">
+                      <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
+                      <div class="col-sm-8"><p id="age"></p></div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
+                      <div class="col-sm-8"><a href="mailto:mjdambion@gmail.com">mjdambion@gmail.com</a></div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
+                      <div class="col-sm-8">09455841223</div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
+                      <div class="col-sm-8">Talon, Amadeo, Cavite</div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-sm-4"><strong class="text-uppercase">Education:</strong></div>
+                      <div class="col-sm-8">Bachelor</div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-sm-4"><strong class="text-uppercase">Facebook Page:</strong></div>
+                      <div class="col-sm-8"><a href="https://www.facebook.com/Mr.Penguin36" target="_blank">https://www.facebook.com/Mr.Penguin36</a></div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">PHP</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div><span class="progress-value"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Python</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div><span class="progress-value"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">HTML</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div><span class="progress-value"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Basic Node Js</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div><span class="progress-value"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">C++</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div><span class="progress-value"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">CSS</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div><span class="progress-value"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Cypress</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">JavaScript</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div><span class="progress-value"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Linux (Ubuntu & Centos)</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div><span class="progress-value"></span>
+
+                <div class="col-lg-6 col-md-12">
+                  <div class="card-body">
+                    <div class="h4 mt-0 title">Motto</div>
+                    <div class="row">
+                      <div class="col-sm-12">Don't be afraid to fail. Because failure is the best ingredient for success.</div>
+                    </div><br>
+                    <div class="h4 mt-0 title">Favorite Quote</div>
+                    <div class="row">
+                      <div class="col-sm-12">Those who do not understand true pain, <br> Can never understand TRUE PEACE <br>~ Pain</div>
+                    </div><br>
+                    <div class="h4 mt-0 title">Hobby</div>
+                    <div class="row">
+                      <div class="col-sm-12">Playing Online Game, Watching Movies, Repairing Desktop/Laptop.</div>
                     </div>
                   </div>
                 </div>
@@ -215,1106 +144,1189 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Employment History -->
-      <div class="section" id="experience">
-        <div class="container cc-education">
-          <div class="h4 text-center mb-4 title">Employment History</div>
-          <!-- Data Engineer Analyst -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header" >
-                  <div class="h5"><b>Data Engineer Analyst</b></div>
-                  <p>FEB 19, 2024 - PRESENT</p>
+        
+
+        <!-- Employment History -->
+        <div class="section" id="experience">
+          <div class="container cc-education">
+            <div class="h4 text-center mb-4 title">Employment History</div>
+            <!-- Data Engineer Analyst -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header" >
+                    <div class="h5"><b>Accenture Strategy & Consulting</b></div>
+                      <p>Cubao, Quezon City, Metro Manila</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Accenture Strategy & Consulting</div>
-                  <p>Cubao, Quezon City, Metro Manila</b></p>
-                  <p><ul>
-                    <li>
-                      <b>Jira Ticket Management & Administration:</b>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>Data Engineer Analyst</b></div>
+                    <p>FEB 19, 2024 - PRESENT</p>
+                    <div class="toggle-container">
+                      <a class="toggle-details" onclick="toggleDetails('details1', this)">
+                        Show more
+                        <i class="fas fa-angle-down"></i>
+                      </a>
+                    </div>
+                    <div id="details1" class="details-content">
                       <ul>
-                        <li>Expertise in handling Jira tickets, ensuring timely resolution of issues and requests.</li>
-                        <li>Proficient in performing Jira Admin tasks, including user management, project configurations, and custom workflows.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Dashboard Monitoring & Reporting:</b>
-                      <ul>
-                        <li>Responsible for monitoring dashboards to ensure system health and performance.</li>
-                        <li>Skilled in creating and maintaining dashboards for real-time data visualization and tracking.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Linux Server Administration:</b>
-                      <ul>
-                        <li>Experienced in managing Linux servers, focusing on system stability, security, and performance.</li>
-                        <li>Proficient in server maintenance tasks, including updates, backups, and troubleshooting.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>System & Data Migration:</b>
-                      <ul>
-                        <li>Led and executed system and data migration projects, ensuring minimal downtime and data integrity.</li>
-                        <li>Skilled in planning and implementing migration strategies for seamless transitions.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Bitbucket Repository Management:</b>
-                      <ul>
-                        <li>Managed Bitbucket repositories, ensuring proper version control and code collaboration.</li>
-                        <li>Experienced in setting up repositories, branching strategies, and access controls.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Technical Documentation & Training:</b>
-                      <ul>
-                        <li>Developed comprehensive technical documentation for data systems and processes.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Cloud Data Solutions (AWS & Azure):</b>
-                      <ul>
-                        <li>Managed cloud infrastructure, ensuring optimal performance, scalability, and security.</li>
-                        <li>Proficient in cloud services such as AWS S3, EC2, RDS, and Azure SQL Database.</li>
-                      </ul>
-                    </li>
-                  </ul></p>
+                      <li>
+                        <b>Jira Ticket Management & Administration:</b>
+                        <ul>
+                          <li>Expertise in handling Jira tickets, ensuring timely resolution of issues and requests.</li>
+                          <li>Proficient in performing Jira Admin tasks, including user management, project configurations, and custom workflows.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Dashboard Monitoring & Reporting:</b>
+                        <ul>
+                          <li>Responsible for monitoring dashboards to ensure system health and performance.</li>
+                          <li>Skilled in creating and maintaining dashboards for real-time data visualization and tracking.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Linux Server Administration:</b>
+                        <ul>
+                          <li>Experienced in managing Linux servers, focusing on system stability, security, and performance.</li>
+                          <li>Proficient in server maintenance tasks, including updates, backups, and troubleshooting.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>System & Data Migration:</b>
+                        <ul>
+                          <li>Led and executed system and data migration projects, ensuring minimal downtime and data integrity.</li>
+                          <li>Skilled in planning and implementing migration strategies for seamless transitions.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Bitbucket Repository Management:</b>
+                        <ul>
+                          <li>Managed Bitbucket repositories, ensuring proper version control and code collaboration.</li>
+                          <li>Experienced in setting up repositories, branching strategies, and access controls.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Technical Documentation & Training:</b>
+                        <ul>
+                          <li>Developed comprehensive technical documentation for data systems and processes.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Cloud Data Solutions (AWS & Azure):</b>
+                        <ul>
+                          <li>Managed cloud infrastructure, ensuring optimal performance, scalability, and security.</li>
+                          <li>Proficient in cloud services such as AWS S3, EC2, RDS, and Azure SQL Database.</li>
+                        </ul>
+                      </li>
+                    </ul></div></p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- IT Administrator -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header" >
-                  <div class="h5"><b>IT Administrator</b></div>
-                  <p>SEP 25, 2023 - FEB 05, 2024</p>
+            <!-- IT Administrator -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header" >
+                    <div class="h5"><b>Solaire Resorts & Casino</b></div>
+                      <p>Paranaque, Philippines</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Solaire Resorts & Casino</div>
-                  <p>Paranaque, Philippines</b></p>
-                  <p><ul>
-                    <li>
-                      <b>Server & Website Management:</b>
-                      <ul>
-                        <li>Expert in server operations, content updates, and security patch applications for optimal website performance.</li>
-                        <li>Skilled in web administration and proficient in various server management tools.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Mobile & Gaming App Development:</b>
-                      <ul>
-                        <li>Specialized in creating engaging user experiences for mobile and online gaming applications.</li>
-                        <li>Proficient in various development platforms for app creation.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Networking & Troubleshooting:</b>
-                      <ul>
-                        <li>Proficient in network setup and maintenance.</li>
-                        <li>Strong capabilities in resolving complex computer issues.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Linux Server Administration:</b>
-                      <ul>
-                        <li>Experienced in managing Linux servers, focusing on system stability, security, and performance.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Control Panel & Web Hosting:</b>
-                      <ul>
-                        <li>Skilled in using control panels like aaPanel for web service management.</li>
-                        <li>Optimized server settings for enhanced website performance.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Backup & Data Recovery:</b>
-                      <ul>
-                        <li>Implemented effective backup strategies and recovery procedures to maintain data integrity.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Domain & DNS Management:</b>
-                      <ul>
-                        <li>Experienced in domain acquisition, management, and DNS configuration.</li>
-                        <li>Ensured optimal website accessibility through proficient domain and DNS management.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>CDN Integration:</b>
-                      <ul>
-                        <li>Implemented CDN solutions to improve website performance and reliability.</li>
-                        <li>Skilled in CDN configuration for enhanced content delivery.</li>
-                      </ul>
-                    </li>
-                  </ul></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project Coordinator -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <div class="h5"><b>PROJECT CO-ORDINATOR</b></div>
-                  <p>FEB 1, 2023 - SEP 30, 2023</p>
-                  <br><p><b>PROJECT EXECUTIVE</b></p>
-                  <p>NOV 1, 2022 - JAN 30, 2023</p>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>The Adventus Consultant</div>
-                  <p>Paranaque, Philippines</b></p>
-                  <p><ul>
-                    <li>
-                      <b>Project Management:</b>
-                      <ul>
-                        <li>Managed multiple projects simultaneously, ensuring timely completion, and adherence to budget and quality standards.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Team Coordination:</b>
-                      <ul>
-                        <li>Coordinated team efforts, delegated tasks, and ensured effective communication and collaboration.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Risk Management:</b>
-                      <ul>
-                        <li>Identified potential risks and developed strategies to mitigate them, resulting in successful project outcomes.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Client Communication:</b>
-                      <ul>
-                        <li>Regularly communicated with clients to provide updates, address concerns, and ensure customer satisfaction.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Reporting:</b>
-                      <ul>
-                        <li>Generated comprehensive reports detailing project progress, challenges, and recommendations.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Backend Support:</b>
-                      <ul>
-                        <li>Provided backend support for minor issues in programming.</li>
-                      </ul>
-                    </li>
-                  </ul></p>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>IT Administrator</b></div>
+                    <p>SEP 25, 2023 - FEB 05, 2024</p>
+                    <div class="toggle-container">
+                      <a class="toggle-details" onclick="toggleDetails('details2', this)">
+                        Show more
+                        <i class="fas fa-angle-down"></i>
+                      </a>
+                    </div>
+                    <div id="details2" class="details-content">
+                        <ul>
+                      <li>
+                        <b>Server & Website Management:</b>
+                        <ul>
+                          <li>Expert in server operations, content updates, and security patch applications for optimal website performance.</li>
+                          <li>Skilled in web administration and proficient in various server management tools.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Mobile & Gaming App Development:</b>
+                        <ul>
+                          <li>Specialized in creating engaging user experiences for mobile and online gaming applications.</li>
+                          <li>Proficient in various development platforms for app creation.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Networking & Troubleshooting:</b>
+                        <ul>
+                          <li>Proficient in network setup and maintenance.</li>
+                          <li>Strong capabilities in resolving complex computer issues.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Linux Server Administration:</b>
+                        <ul>
+                          <li>Experienced in managing Linux servers, focusing on system stability, security, and performance.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Control Panel & Web Hosting:</b>
+                        <ul>
+                          <li>Skilled in using control panels like aaPanel for web service management.</li>
+                          <li>Optimized server settings for enhanced website performance.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Backup & Data Recovery:</b>
+                        <ul>
+                          <li>Implemented effective backup strategies and recovery procedures to maintain data integrity.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Domain & DNS Management:</b>
+                        <ul>
+                          <li>Experienced in domain acquisition, management, and DNS configuration.</li>
+                          <li>Ensured optimal website accessibility through proficient domain and DNS management.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>CDN Integration:</b>
+                        <ul>
+                          <li>Implemented CDN solutions to improve website performance and reliability.</li>
+                          <li>Skilled in CDN configuration for enhanced content delivery.</li>
+                        </ul>
+                      </li>
+                    </ul></div></p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Software Engineer -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <div class="h5"><b>SOFTWARE ENGINEER</b></div>
-                  <p>JULY 2022-JAN 2023</p>
+            <!-- Project Coordinator -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>The Adventus Consultant</b></div>
+                      <p>Paranaque, Philippines</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Acaciasoft</div>
-                  <p>Antipolo, Rizal</b></p>
-                  <p><ul>
-                    <li>
-                      <b>Coding and Algorithm Development:</b>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>PROJECT CO-ORDINATOR</b></div>
+                    <p>FEB 1, 2023 - SEP 30, 2023</p>
+                    <p><b>PROJECT EXECUTIVE</b><br>NOV 1, 2022 - JAN 30, 2023</p>
+                    <div class="toggle-container">
+                      <a class="toggle-details" onclick="toggleDetails('details3', this)">
+                        Show more
+                        <i class="fas fa-angle-down"></i>
+                      </a>
+                    </div>
+                    <div id="details3" class="details-content">
+                      
                       <ul>
-                        <li>Utilized coding skills to develop and implement efficient algorithms and programs.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Debugging Expertise:</b>
-                      <ul>
-                        <li>Demonstrated strong debugging skills to identify and resolve software issues.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Software Testing:</b>
-                      <ul>
-                        <li>Performed thorough software testing to ensure high-quality and error-free applications.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Problem-Solving Abilities:</b>
-                      <ul>
-                        <li>Exercised problem-solving abilities to address complex technical challenges.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Version Control:</b>
-                      <ul>
-                        <li>Utilized version control tools to effectively manage and track changes to software projects.</li>
-                      </ul>
-                    </li>
-                  </ul></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- IT Specialist -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <div class="h5"><b>IT Specialist / Admin Staff</b></div>
-                  <p>MAY 2016 - JULY 2017</p>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>KXF Corporation Inc.</div>
-                  <p>Makati Philippines</b></p>
-                  <p><ul>
-                    <li>
-                      <b>Technical Issue Resolution:</b>
-                      <ul>
-                        <li>Resolved technical issues by troubleshooting and diagnosing problems.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Network Maintenance:</b>
-                      <ul>
-                        <li>Performed regular network maintenance tasks to ensure optimal performance.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Software Installation and Configuration:</b>
-                      <ul>
-                        <li>Installed various software programs and configured settings as required.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Office Operations Management:</b>
-                      <ul>
-                        <li>Managed office operations and provided administrative support to the team.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Data Backup Procedures:</b>
-                      <ul>
-                        <li>Executed data backup procedures to safeguard important information.</li>
-                      </ul>
-                    </li>
-                  </ul></p>
+                      <li>
+                        <b>Project Management:</b>
+                        <ul>
+                          <li>Managed multiple projects simultaneously, ensuring timely completion, and adherence to budget and quality standards.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Team Coordination:</b>
+                        <ul>
+                          <li>Coordinated team efforts, delegated tasks, and ensured effective communication and collaboration.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Risk Management:</b>
+                        <ul>
+                          <li>Identified potential risks and developed strategies to mitigate them, resulting in successful project outcomes.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Client Communication:</b>
+                        <ul>
+                          <li>Regularly communicated with clients to provide updates, address concerns, and ensure customer satisfaction.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Reporting:</b>
+                        <ul>
+                          <li>Generated comprehensive reports detailing project progress, challenges, and recommendations.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Backend Support:</b>
+                        <ul>
+                          <li>Provided backend support for minor issues in programming.</li>
+                        </ul>
+                      </li>
+                    </ul></div></p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Admin TL - Logistics -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <div class="h5"><b>Admin TL Logistics</b></div>
-                  <p>2015-2016</p>
+            <!-- Software Engineer -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>Acaciasoft</b></div>
+                      <p>Antipolo, Rizal</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>BTC-Manila / PSulit Money Changer</b></div>
-                  <p>Eastwood, Quezon City</p>
-                  <ul>
-                    <li><b>Logistics in Financial Transactions:</b>
-                      <ul>
-                        <li>Managed the logistics of financial transactions, ensuring efficient and secure transfer of funds in forex and cryptocurrency exchanges.</li>
-                      </ul>
-                    </li>
-                    <li><b>Inventory Management of Financial Assets:</b>
-                      <ul>
-                        <li>Implemented control measures for the inventory of financial assets, optimizing levels and minimizing risks in forex and crypto holdings.</li>
-                      </ul>
-                    </li>
-                    <li><b>Financial Record Keeping:</b>
-                      <ul>
-                        <li>Handled financial records, including accounts related to forex and cryptocurrency transactions, ensuring accuracy and regulatory compliance.</li>
-                      </ul>
-                    </li>
-                    <li><b>Process Improvement in Financial Logistics:</b>
-                      <ul>
-                        <li>Identified and implemented strategies for process improvement in the logistics of financial transactions, enhancing efficiency and productivity in forex and crypto operations.</li>
-                      </ul>
-                    </li>
-                    <li><b>Leadership in Financial Logistics:</b>
-                      <ul>
-                        <li>Provided effective leadership in the logistics team, guiding and motivating members to achieve goals in the fast-paced environment of forex and cryptocurrency exchanges.</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="h4 text-center mb-4 title">Part Time Job History</div>
-          <!-- Computer Specialist -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <div class="h5"><b>Laptop/Computers and Gadgets Repair Technician (Software & Hardware)</b></div>
-                  <p>Since 2014 to Present</p>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Side Hustle</b></div>
-                  <p><b>Key Responsibilities:</b></p>
-                  <ul>
-                    <li>Diagnosed and repaired a wide range of technical issues in laptops, computers, and various gadgets, focusing on both software and hardware problems.</li>
-                    <li>Provided consultation and advice to clients on maintenance and care of their devices.</li>
-                    <li>Stayed up-to-date with the latest technological developments to offer the most current solutions.</li>
-                    <li>Managed inventory and ordering of repair parts and tools.</li>
-                  </ul>
-                  <p><b>Skills Gained:</b></p>
-                  <ul>
-                    <li>In-depth technical knowledge of computer systems and gadget repairs.</li>
-                    <li>Customer service and consulting skills.</li>
-                    <li>Effective time management and organizational abilities.</li>
-                  </ul>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>SOFTWARE ENGINEER</b></div>
+                    <p>JULY 2022-JAN 2023</p>
+                    <p><div class="toggle-container">
+                        <a class="toggle-details" onclick="toggleDetails('details4', this)">
+                          Show more
+                          <i class="fas fa-angle-down"></i>
+                        </a>
+                      </div>
+                      <div id="details4" class="details-content">
+                        <ul>
+                      <li>
+                        <b>Coding and Algorithm Development:</b>
+                        <ul>
+                          <li>Utilized coding skills to develop and implement efficient algorithms and programs.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Debugging Expertise:</b>
+                        <ul>
+                          <li>Demonstrated strong debugging skills to identify and resolve software issues.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Software Testing:</b>
+                        <ul>
+                          <li>Performed thorough software testing to ensure high-quality and error-free applications.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Problem-Solving Abilities:</b>
+                        <ul>
+                          <li>Exercised problem-solving abilities to address complex technical challenges.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Version Control:</b>
+                        <ul>
+                          <li>Utilized version control tools to effectively manage and track changes to software projects.</li>
+                        </ul>
+                      </li>
+                    </ul></div></p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          
-          <!-- Wordpress Developer -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <div class="h5"><b>WordPress Developer</b></div>
-                  <p>MAY 2021 - SEP 2023</p>
+            <!-- IT Specialist -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>KXF / RAT Corporation Inc.</b></div>
+                      <p>Makati Philippines</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Freelance</b></div>
-                  <p><b>Key Responsibilities:</b></p>
-                  <ul>
-                    <li>Specialized in uploading content and images, enhancing user experience (UX) design.</li>
-                    <li>Performed minor back-end development tasks.</li>
-                    <li>Ensured optimal website performance, focusing on load times and debugging to maintain a bug-free, efficient user experience.</li>
-                  </ul>
-                  <p><b>Skills Gained:</b></p>
-                  <ul>
-                    <li>Proficiency in WordPress, including both front-end and back-end aspects.</li>
-                    <li>Skills in UX design and website performance optimization.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>     
-
-          <!-- Website Developer -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <div class="h5"><b>Website Developer (HTML, JavaScript & PHP)</b></div>
-                  <p>JUNE 2021 - SEP 2023</p>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Freelance</b></div>
-                  <p><ul>
-                    <li>
-                      <b>Key Responsibilities:</b>
-                      <ul>
-                        <li>Developed websites from scratch using HTML, JavaScript, and PHP.</li>
-                        <li>Collaborated with clients to determine website specifications and requirements.</li>
-                        <li>Implemented responsive design to ensure optimal viewing across various devices.</li>
-                        <li>Conducted thorough testing and debugging to ensure high-quality website performance.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Skills Gained:</b>
-                      <ul>
-                        <li>Full-stack web development expertise.</li>
-                        <li>Proficiency in client communication and requirement analysis.</li>
-                        <li>Strong problem-solving skills and attention to detail.</li>
-                      </ul>
-                    </li>
-                  </ul></p>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>IT Specialist / Admin Staff</b></div>
+                    <p>MAY 2016 - JULY 2017</p>
+                    <p><div class="toggle-container">
+                        <a class="toggle-details" onclick="toggleDetails('details5', this)">
+                          Show more
+                          <i class="fas fa-angle-down"></i>
+                        </a>
+                      </div>
+                      <div id="details5" class="details-content">
+                        <ul>
+                      <li>
+                        <b>Technical Issue Resolution:</b>
+                        <ul>
+                          <li>Resolved technical issues by troubleshooting and diagnosing problems.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Network Maintenance:</b>
+                        <ul>
+                          <li>Performed regular network maintenance tasks to ensure optimal performance.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Software Installation and Configuration:</b>
+                        <ul>
+                          <li>Installed various software programs and configured settings as required.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Office Operations Management:</b>
+                        <ul>
+                          <li>Managed office operations and provided administrative support to the team.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Data Backup Procedures:</b>
+                        <ul>
+                          <li>Executed data backup procedures to safeguard important information.</li>
+                        </ul>
+                      </li>
+                    </ul></div></p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Assistant Manager -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <div class="h5"><b>Assistant Manager</b></div>
-                  <p>JULY 2021 - APR 2022</p>
+            <!-- Admin TL - Logistics -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>BTC-Manila / PSulit Money Changer</b></div>
+                    <p>Eastwood, Quezon City</p>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>Admin TL Logistics</b></div>
+                    <p>2015-2016</p>
+                    <p><div class="toggle-container">
+                        <a class="toggle-details" onclick="toggleDetails('details6', this)">
+                          Show more
+                          <i class="fas fa-angle-down"></i>
+                        </a>
+                      </div>
+                      <div id="details6" class="details-content">
+                    <ul>
+                      <li><b>Logistics in Financial Transactions:</b>
+                        <ul>
+                          <li>Managed the logistics of financial transactions, ensuring efficient and secure transfer of funds in forex and cryptocurrency exchanges.</li>
+                        </ul>
+                      </li>
+                      <li><b>Inventory Management of Financial Assets:</b>
+                        <ul>
+                          <li>Implemented control measures for the inventory of financial assets, optimizing levels and minimizing risks in forex and crypto holdings.</li>
+                        </ul>
+                      </li>
+                      <li><b>Financial Record Keeping:</b>
+                        <ul>
+                          <li>Handled financial records, including accounts related to forex and cryptocurrency transactions, ensuring accuracy and regulatory compliance.</li>
+                        </ul>
+                      </li>
+                      <li><b>Process Improvement in Financial Logistics:</b>
+                        <ul>
+                          <li>Identified and implemented strategies for process improvement in the logistics of financial transactions, enhancing efficiency and productivity in forex and crypto operations.</li>
+                        </ul>
+                      </li>
+                      <li><b>Leadership in Financial Logistics:</b>
+                        <ul>
+                          <li>Provided effective leadership in the logistics team, guiding and motivating members to achieve goals in the fast-paced environment of forex and cryptocurrency exchanges.</li>
+                        </ul>
+                      </li>
+                    </ul></div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Family Business - Online</div>
-                  <p>General Trias, Cavite</b></p>
-                  <p><ul>
+            </div>
+
+            <div class="h4 text-center mb-4 title">Part Time Job History</div>
+            <!-- Computer Specialist -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>Side Hustle</b></div>
+                    <p>Since 2014 to Present</p>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>Laptop/Computers and Gadgets Repair Technician (Software & Hardware)</b></div>
+                    <p><div class="toggle-container">
+                        <a class="toggle-details" onclick="toggleDetails('details7', this)">
+                          Show more
+                          <i class="fas fa-angle-down"></i>
+                        </a>
+                      </div>
+                      <div id="details7" class="details-content">
+                    <p><b>Key Responsibilities:</b></p>
+                    <ul>
+                      <li>Diagnosed and repaired a wide range of technical issues in laptops, computers, and various gadgets, focusing on both software and hardware problems.</li>
+                      <li>Provided consultation and advice to clients on maintenance and care of their devices.</li>
+                      <li>Stayed up-to-date with the latest technological developments to offer the most current solutions.</li>
+                      <li>Managed inventory and ordering of repair parts and tools.</li>
+                    </ul>
+                    <p><b>Skills Gained:</b></p>
+                    <ul>
+                      <li>In-depth technical knowledge of computer systems and gadget repairs.</li>
+                      <li>Customer service and consulting skills.</li>
+                      <li>Effective time management and organizational abilities.</li>
+                    </ul></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Wordpress Developer -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>Freelance</b></div>
+                    <p>MAY 2021 - SEP 2023</p>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>WordPress Developer</b></div>
+                    <div class="toggle-container">
+                      <a class="toggle-details" onclick="toggleDetails('details8', this)">
+                        Show more
+                        <i class="fas fa-angle-down"></i>
+                      </a>
+                    </div>
+                    <div id="details8" class="details-content">
+                      <p><b>Key Responsibilities:</b></p>
+                    <ul>
+                      <li>Specialized in uploading content and images, enhancing user experience (UX) design.</li>
+                      <li>Performed minor back-end development tasks.</li>
+                      <li>Ensured optimal website performance, focusing on load times and debugging to maintain a bug-free, efficient user experience.</li>
+                    </ul>
+                    <p><b>Skills Gained:</b></p>
+                    <ul>
+                      <li>Proficiency in WordPress, including both front-end and back-end aspects.</li>
+                      <li>Skills in UX design and website performance optimization.</li>
+                    </ul></div>
+                  </div>
+                </div>
+              </div>
+            </div>     
+            <!-- Website Developer -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>Freelance</b></div>
+                    <p>JUNE 2021 - SEP 2023</p>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>Website Developer (HTML, JavaScript & PHP)</b></div>
+                    <p><div class="toggle-container">
+                      <a class="toggle-details" onclick="toggleDetails('details9', this)">
+                        Show more
+                        <i class="fas fa-angle-down"></i>
+                      </a>
+                    </div>
+                    <div id="details9" class="details-content"><ul>
                       <li>
                         <b>Key Responsibilities:</b>
                         <ul>
-                          <li>Managed daily operations and coordinated with a team of employees for an online family business.</li>
-                          <li>Handled financial aspects including budgeting, salary computation, and salary distribution.</li>
-                          <li>Conducted and facilitated online meetings for a team of over 40 employees, ensuring smooth communication and workflow during the pandemic.</li>
-                          <li>Played a pivotal role in decision-making and strategy planning to enhance business operations.</li>
+                          <li>Developed websites from scratch using HTML, JavaScript, and PHP.</li>
+                          <li>Collaborated with clients to determine website specifications and requirements.</li>
+                          <li>Implemented responsive design to ensure optimal viewing across various devices.</li>
+                          <li>Conducted thorough testing and debugging to ensure high-quality website performance.</li>
                         </ul>
                       </li>
                       <li>
                         <b>Skills Gained:</b>
                         <ul>
-                          <li>Leadership and team management in a remote work environment.</li>
-                          <li>Financial management and salary administration.</li>
-                          <li>Effective communication and organizational skills.</li>
+                          <li>Full-stack web development expertise.</li>
+                          <li>Proficiency in client communication and requirement analysis.</li>
+                          <li>Strong problem-solving skills and attention to detail.</li>
                         </ul>
                       </li>
-                  </ul></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Portfolio -->
-      <div class="section" id="portfolio">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 ml-auto mr-auto">
-              <div class="h4 text-center mb-4 title">Portfolio</div>
-              <div class="nav-align-center">
-                <ul class="nav nav-pills nav-pills-primary" role="tablist">
-                  <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#school_activity" role="tablist"><i class="fa fa-book" aria-hidden="true"></i></a></li>
-                  <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#web_development" role="tablist"><i class="fa fa-laptop-code" aria-hidden="true"></i></a></li>
-                  <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#webinars" role="tablist"><i class="fa fa-project-diagram" aria-hidden="true"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="tab-content gallery mt-5">
-            <div class="tab-pane" id="school_activity"  role="tabpanel">
-              <div class="ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#">
-                      <figure class="cc-effect"><img src="images\Activity\apporganizer.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">App Organizer</div>
-                          <p>School Activity</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#">
-                      <figure class="cc-effect"><img src="images\Activity\Simplebanktransaction.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Simple Bank Transaction</div>
-                          <p>School Activity</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#">
-                      <figure class="cc-effect"><img src="images\Activity\Band.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Creating Website Using HTML (Band)</div>
-                          <p>School Activity</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#">
-                      <figure class="cc-effect"><img src="images\Website\GoCrayons-Activity1.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Go Crayons Activity 1</div>
-                          <p>Doing some html website in Go Crayons during WordPress Development Training</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#">
-                      <figure class="cc-effect"><img src="images\Website\GoCrayons-Activity2.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Go Crayons Activity 2</div>
-                          <p>Doing some html website in Go Crayons during WordPress Development Training</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://emem1936.github.io/barber_activity" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\GoCrayons-Activity3.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Go Crayons Activity 3 (Barber Website)</div>
-                          <p>Doing some html website in Go Crayons during WordPress Development Training</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
+                    </ul></div></p>
                   </div>
                 </div>
               </div>
             </div>
-
-
-            <div class="tab-pane active" id="web_development">
-              <div class="ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://emcc.org.sg/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\EMCC.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">EMCC</div>
-                          <p>In my role as Project Coordinator, I handle the creation of WordPress pages, minor backend adjustments, 
-                            plugin updates, and implement various changes to ensure optimal website performance.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://asef.org/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\ASEF.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Asia-Uerope Foundation</div>
-                          <p>In my role as Project Coordinator, I handle the creation of WordPress pages, minor backend adjustments, 
-                            plugin updates, and implement various changes to ensure optimal website performance.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://dev-taihing.theadventus.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\Taihing.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Tai Hing (Odoo Inventory and Delivery Dashboard Website)</div>
-                          <p>As a proficient project coordinator, I oversee the development process by actively engaging with 
-                            clients and developers, prioritizing their concerns, and implementing requested changes onto the website; 
-                            in addition, I meticulously conduct thorough testing to ensure optimal functionality, 
-                            ultimately delivering a polished and error-free end product.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://emem1936.github.io/Amerigmovers" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\Amerigmovers.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Amerigmovers (HTML Website)</div>
-                          <p>Doing Part Time - backend Maintenance and enhancement on the Website</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.elrincontx.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\Elrincon.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Elrincon</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://badolinabakery.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\Badolina.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Badolina Bakery</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.bigeasyseo.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\bigeasyseo.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Big Easy Seo</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.wholesalediamondstx.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\Wholesalediamondstx.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Wholesale Diamonds TX</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.fitnessexpostores.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\Fitnessexpostores.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Fitness Expo</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://advantagemedicalprofessionals.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\Advantagemedicalprofessionals.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Advantage Medical Professionals</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.nolaautomotiverepairs.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\nolaautomotiverepairs.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Nola Automotive Repair</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    
-                  </div>
-
-
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="http://theta.uobemmp1.inginim.com/edm/index.php/users/login" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\UOB.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">UOB (PHP Webiste)</div>
-                          <p>As a Project Coordinator, I serve as the vital communication link between clients and developers, managing requests, enhancements, 
-                            and website changes, while also actively participating in debugging, code tracing, testing, and server deployments to ensure project success.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://baronwines-newwebsitefinal-9290336.dev.odoo.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\Baronwines.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Baronwines (Odoo Website)</div>
-                          <p>Skilled Project Coordinator adept at liaising between clients and developers to implement website enhancements, 
-                            conducting quality tests to ensure issue resolution, and meeting stringent deadlines.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://transport.swiftoffice.org/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\rsaf.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">RSAF (Node Js Transport Web Application)</div>
-                          <p>As a project coordinator, I facilitate communication between clients and developers, 
-                            ensuring the incorporation of client concerns and requested changes into the website. 
-                            Additionally, I conduct thorough testing, implement minor backend changes, 
-                            and oversee various aspects of project execution for seamless delivery.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.ecostarfoam.com/"target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\ecostarfoam.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Ecostar Foam</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.teleleaf.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\teleleaf.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Teleleaf</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.lawnandleisure.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\Lawnleisure.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Lawn & Leisure</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.bigeasyconcrete.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\bigeasyconcrete.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Big Easy Concrete</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.goldengatefences.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\gonldengatefences.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Golden Gate Fences</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.goldengatetreeremoval.com/" target="_blank">
-                      <figure class="cc-effect"><img src="images\Website\goldengatetreeremoval.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Golde Gate Tree Removal</div>
-                          <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
-                            My services include web page creation, uploading content and images, 
-                            as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
-                            I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
-                            implementing advanced caching, and fine-tuning CSS and JavaScript. 
-                            My approach ensures a fast, responsive, and user-friendly website experience.</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
+            <!-- Assistant Manager -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>Family Business - Online</b></div>
+                      <p>General Trias, Cavite</p>
+                    <p>JULY 2021 - APR 2022</p>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="tab-pane" id="webinars" role="tabpanel">
-              <div class="ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="https://drive.google.com/file/d/1j31Py23_gPh2FR935GNmYDsPrd2zFfvo/view?usp=sharing" target="_blank">
-                      <figure class="cc-effect"><img src="images\webinars\Webinar1.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Blockchain Technology-Concepts, <br>Security & Real Time Application</div>
-                          <p>Webinar</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="https://drive.google.com/file/d/1Wp4eG_rplrUTuCO41MNYPrAONXCMypK3/view?usp=drive_link" target="_blank">
-                      <figure class="cc-effect"><img src="images\webinars\Webinar2.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Data Analysis in R using STATCRAFT</div>
-                          <p>Webinar</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="https://drive.google.com/file/d/1WT2EJPRC1R2ZWj17gCLd2hBQUW3g7cgS/view?usp=drive_link" target="_blank">
-                      <figure class="cc-effect"><img src="images\webinars\Webinar3.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Digital Branding: <br>Creating Your Business Identity</div>
-                          <p>Webinar</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="https://drive.google.com/file/d/1BWeNiDP3PSLeQIt3kmUG1XsNxtEBqCM5/view?usp=drive_link" target="_blank">
-                      <figure class="cc-effect"><img src="images\webinars\Webinar4.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Enterprise Artificial Intelligence: <br>Data Analytics, Data Science, <br>and Machine Learning</div>
-                          <p>Webinar</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="https://drive.google.com/file/d/1d4NX48j547L79yzNV6G0BbbNT-3qTjWe/view?usp=drive_link" target="_blank">
-                      <figure class="cc-effect"><img src="images\webinars\Webinar5.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Ground Breaking <br>Data Science Technologies <br>with Plethora of Resources <br>in the Intelligent Scenario</div>
-                          <p>Webinar</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="https://drive.google.com/file/d/10tXDi1J89PJBt_eKX6C4Y2GcCl1jtOC3/view?usp=drive_link" target="_blank">
-                      <figure class="cc-effect"><img src="images\webinars\Webinar8.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Mobile Commerce: Uncovered</div>
-                          <p>Webinar</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="https://drive.google.com/file/d/116ZSyekpkhaVggYYhv3K2Jek2hP3yISX/view?usp=drive_link" target="_blank">
-                      <figure class="cc-effect"><img src="images\webinars\Webinar10.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Python Programming</div>
-                          <p>Webinar</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="https://drive.google.com/file/d/1mw0WmLslj0itqmJRc38hTtlTIfZOBj3n/view?usp=drive_link" target="_blank">
-                      <figure class="cc-effect"><img src="images\webinars\Webinar7.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">Introduction to Web Security Threats</div>
-                          <p>Webinar</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="https://drive.google.com/file/d/11BMdyFMFQ79yXwaXmRKD8iyKiWvF6fjj/view?usp=drive_link" target="_blank">
-                      <figure class="cc-effect"><img src="images\webinars\Webinar11.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">The Future Ecommerce</div>
-                          <p>Webinar</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
-                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="https://drive.google.com/file/d/1LKrjPgE9fpHErGyJmpOOSNXDaK8cQod8/view?usp=drive_link" target="_blank">
-                      <figure class="cc-effect"><img src="images\webinars\Webinar12.png" alt="Image"/>
-                        <figcaption>
-                          <div class="h4">TRECVID: <br>The Video Retrieval <br>Evaluation Benchmark</div>
-                          <p>Webinar</p>
-                        </figcaption>
-                      </figure></a>
-                    </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>Assistant Manager</b></div>
+                    <p><div class="toggle-container">
+                        <a class="toggle-details" onclick="toggleDetails('details10', this)">
+                          Show more
+                          <i class="fas fa-angle-down"></i>
+                        </a>
+                      </div>
+                      <div id="details10" class="details-content"><ul>
+                        <li>
+                          <b>Key Responsibilities:</b>
+                          <ul>
+                            <li>Managed daily operations and coordinated with a team of employees for an online family business.</li>
+                            <li>Handled financial aspects including budgeting, salary computation, and salary distribution.</li>
+                            <li>Conducted and facilitated online meetings for a team of over 40 employees, ensuring smooth communication and workflow during the pandemic.</li>
+                            <li>Played a pivotal role in decision-making and strategy planning to enhance business operations.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <b>Skills Gained:</b>
+                          <ul>
+                            <li>Leadership and team management in a remote work environment.</li>
+                            <li>Financial management and salary administration.</li>
+                            <li>Effective communication and organizational skills.</li>
+                          </ul>
+                        </li>
+                    </ul></div></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Education -->
-      <div class="section" id="education">
-        <div class="container cc-education">
-          <div class="h4 text-center mb-4 title">Education</div>
-          <!-- CVSU -->
-          <div class="card">
+        <!-- Portfolio -->
+        <div class="section" id="portfolio">
+          <div class="container">
             <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <p>SY 2017-2022</p>
-                  <div class="h5">College</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Cavite State University - Silang</div>
-                  <p>Silang, Cavite</b></p>
-                  <p><ul>
-                    <li>
-                      <b>Student Elections Involvement:</b>
-                      <ul>
-                        <li>Participated in COMELEC (Commission on Elections) to organize credible student elections.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Leadership and Financial Expertise:</b>
-                      <ul>
-                        <li>Served as the revered Treasurer in the CSharp school organization.</li>
-                        <li>Sharpened leadership qualities and gained financial expertise through the role.</li>
-                      </ul>
-                    </li>
-                </ul></p>
+              <div class="col-md-6 ml-auto mr-auto">
+                <div class="h4 text-center mb-4 title">Portfolio</div>
+                <div class="nav-align-center">
+                  <ul class="nav nav-pills nav-pills-primary" role="tablist">
+                    <li class="nav-item" onclick="changeTab('school_activity')"><a class="nav-link" data-toggle="tab" href="#school_activity" role="tablist"><i class="fa fa-book" aria-hidden="true"></i></a></li>
+                    <li class="nav-item" onclick="changeTab('web_development')"><a class="nav-link active" data-toggle="tab" href="#web_development" role="tablist"><i class="fa fa-laptop-code" aria-hidden="true"></i></a></li>
+                    <li class="nav-item" onclick="changeTab('webinars')"><a class="nav-link" data-toggle="tab" href="#webinars" role="tablist"><i class="fa fa-project-diagram" aria-hidden="true"></i></a></li>
+                  </ul>
                 </div>
               </div>
             </div>
-          </div>
+            <div class="tab-content gallery mt-5">
+              <div class="tab-pane" id="school_activity">
+                <div class="ml-auto mr-auto">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#">
+                        <figure class="cc-effect"><img src="images\Activity\apporganizer.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">App Organizer</div>
+                            <p>School Activity</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#">
+                        <figure class="cc-effect"><img src="images\Activity\Simplebanktransaction.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Simple Bank Transaction</div>
+                            <p>School Activity</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#">
+                        <figure class="cc-effect"><img src="images\Activity\Band.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Creating Website Using HTML (Band)</div>
+                            <p>School Activity</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                    </div>
 
-          <!-- ICC -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <p>SY 2012-2014</p>
-                  <div class="h5">College</div>
+                    <div class="col-md-6">
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#">
+                        <figure class="cc-effect"><img src="images\Website\GoCrayons-Activity1.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Go Crayons Activity 1</div>
+                            <p>Doing some html website in Go Crayons during WordPress Development Training</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#">
+                        <figure class="cc-effect"><img src="images\Website\GoCrayons-Activity2.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Go Crayons Activity 2</div>
+                            <p>Doing some html website in Go Crayons during WordPress Development Training</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://emem1936.github.io/barber_activity" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\GoCrayons-Activity3.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Go Crayons Activity 3 (Barber Website)</div>
+                            <p>Doing some html website in Go Crayons during WordPress Development Training</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Imus Computer College - Silang Branch</div>
-                  <p>Silang, Cavite</b></p>
-                  <p><ul>
-                      <li>
-                        <b>Dual Role: Athlete and Technologist at ICC, Silang Branch, Silang, Cavite</b>
-                        <ul>
-                          <li>Key member of the volleyball and basketball teams</li>
-                          <li>Nurtured enduring relationships and developed a strong sense of team spirit</li>
-                          <li>Honed athletic abilities through active participation in sports</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <b>Hardware and Software Servicing:</b>
-                        <ul>
-                          <li>Ventured into hardware and software servicing during my time at ICC</li>
-                          <li>Utilized endowed skills to tackle complex challenges in computer services</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <b>President of ACTs (Association of Computer Technicians Student):</b>
-                        <ul>
-                          <li>Proudly served as the President of the ACTs at ICC</li>
-                          <li>Facilitated collaboration among students interested in computer technology</li>
-                          <li>Shared expertise and contributed to the growth and development of fellow students</li>
-                          <li>Played a leadership role in advancing the shared passion for technology within the ACTsv</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <b>Well-Rounded Individual:</b>
-                        <ul>
-                          <li>Harmonious blend of athleticism, technological prowess, and leadership</li>
-                          <li>Shaped into an individual with a unique skill set and a penchant for both sports and technology.</li>
-                        </ul>
-                      </li>
-                  </ul></p>
+
+              <div class="tab-pane" id="web_development">
+                <div class="ml-auto mr-auto">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://emcc.org.sg/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\EMCC.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">EMCC</div>
+                            <p>In my role as Project Coordinator, I handle the creation of WordPress pages, minor backend adjustments, 
+                              plugin updates, and implement various changes to ensure optimal website performance.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://asef.org/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\ASEF.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Asia-Uerope Foundation</div>
+                            <p>In my role as Project Coordinator, I handle the creation of WordPress pages, minor backend adjustments, 
+                              plugin updates, and implement various changes to ensure optimal website performance.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://dev-taihing.theadventus.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\Taihing.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Tai Hing (Odoo Inventory and Delivery Dashboard Website)</div>
+                            <p>As a proficient project coordinator, I oversee the development process by actively engaging with 
+                              clients and developers, prioritizing their concerns, and implementing requested changes onto the website; 
+                              in addition, I meticulously conduct thorough testing to ensure optimal functionality, 
+                              ultimately delivering a polished and error-free end product.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://emem1936.github.io/Amerigmovers" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\Amerigmovers.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Amerigmovers (HTML Website)</div>
+                            <p>Doing Part Time - backend Maintenance and enhancement on the Website</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.elrincontx.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\Elrincon.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Elrincon</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://badolinabakery.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\Badolina.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Badolina Bakery</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.bigeasyseo.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\bigeasyseo.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Big Easy Seo</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.wholesalediamondstx.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\Wholesalediamondstx.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Wholesale Diamonds TX</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.fitnessexpostores.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\Fitnessexpostores.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Fitness Expo</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://advantagemedicalprofessionals.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\Advantagemedicalprofessionals.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Advantage Medical Professionals</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.nolaautomotiverepairs.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\nolaautomotiverepairs.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Nola Automotive Repair</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="http://theta.uobemmp1.inginim.com/edm/index.php/users/login" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\UOB.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">UOB (PHP Webiste)</div>
+                            <p>As a Project Coordinator, I serve as the vital communication link between clients and developers, managing requests, enhancements, 
+                              and website changes, while also actively participating in debugging, code tracing, testing, and server deployments to ensure project success.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://baronwines-newwebsitefinal-9290336.dev.odoo.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\Baronwines.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Baronwines (Odoo Website)</div>
+                            <p>Skilled Project Coordinator adept at liaising between clients and developers to implement website enhancements, 
+                              conducting quality tests to ensure issue resolution, and meeting stringent deadlines.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://transport.swiftoffice.org/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\rsaf.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">RSAF (Node Js Transport Web Application)</div>
+                            <p>As a project coordinator, I facilitate communication between clients and developers, 
+                              ensuring the incorporation of client concerns and requested changes into the website. 
+                              Additionally, I conduct thorough testing, implement minor backend changes, 
+                              and oversee various aspects of project execution for seamless delivery.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.ecostarfoam.com/"target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\ecostarfoam.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Ecostar Foam</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.teleleaf.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\teleleaf.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Teleleaf</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.lawnandleisure.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\Lawnleisure.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Lawn & Leisure</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.bigeasyconcrete.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\bigeasyconcrete.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Big Easy Concrete</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.goldengatefences.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\gonldengatefences.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Golden Gate Fences</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="https://www.goldengatetreeremoval.com/" target="_blank">
+                        <figure class="cc-effect"><img src="images\Website\goldengatetreeremoval.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Golde Gate Tree Removal</div>
+                            <p>As a WordPress developer, I not only specialize in performance optimization but also in content management. 
+                              My services include web page creation, uploading content and images, 
+                              as well as technical tasks like setting up CDN via BunnyCDN and domain management with WPX. 
+                              I optimize site performance by installing and configuring WP Rocket and Imagify plugins, 
+                              implementing advanced caching, and fine-tuning CSS and JavaScript. 
+                              My approach ensures a fast, responsive, and user-friendly website experience.</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="webinars" >
+                <div class="ml-auto mr-auto">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="https://drive.google.com/file/d/1j31Py23_gPh2FR935GNmYDsPrd2zFfvo/view?usp=sharing" target="_blank">
+                        <figure class="cc-effect"><img src="images\webinars\Webinar1.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Blockchain Technology-Concepts, <br>Security & Real Time Application</div>
+                            <p>Webinar</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="https://drive.google.com/file/d/1Wp4eG_rplrUTuCO41MNYPrAONXCMypK3/view?usp=drive_link" target="_blank">
+                        <figure class="cc-effect"><img src="images\webinars\Webinar2.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Data Analysis in R using STATCRAFT</div>
+                            <p>Webinar</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="https://drive.google.com/file/d/1WT2EJPRC1R2ZWj17gCLd2hBQUW3g7cgS/view?usp=drive_link" target="_blank">
+                        <figure class="cc-effect"><img src="images\webinars\Webinar3.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Digital Branding: <br>Creating Your Business Identity</div>
+                            <p>Webinar</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="https://drive.google.com/file/d/1BWeNiDP3PSLeQIt3kmUG1XsNxtEBqCM5/view?usp=drive_link" target="_blank">
+                        <figure class="cc-effect"><img src="images\webinars\Webinar4.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Enterprise Artificial Intelligence: <br>Data Analytics, Data Science, <br>and Machine Learning</div>
+                            <p>Webinar</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="https://drive.google.com/file/d/1d4NX48j547L79yzNV6G0BbbNT-3qTjWe/view?usp=drive_link" target="_blank">
+                        <figure class="cc-effect"><img src="images\webinars\Webinar5.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Ground Breaking <br>Data Science Technologies <br>with Plethora of Resources <br>in the Intelligent Scenario</div>
+                            <p>Webinar</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="https://drive.google.com/file/d/10tXDi1J89PJBt_eKX6C4Y2GcCl1jtOC3/view?usp=drive_link" target="_blank">
+                        <figure class="cc-effect"><img src="images\webinars\Webinar8.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Mobile Commerce: Uncovered</div>
+                            <p>Webinar</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="https://drive.google.com/file/d/116ZSyekpkhaVggYYhv3K2Jek2hP3yISX/view?usp=drive_link" target="_blank">
+                        <figure class="cc-effect"><img src="images\webinars\Webinar10.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Python Programming</div>
+                            <p>Webinar</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="https://drive.google.com/file/d/1mw0WmLslj0itqmJRc38hTtlTIfZOBj3n/view?usp=drive_link" target="_blank">
+                        <figure class="cc-effect"><img src="images\webinars\Webinar7.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">Introduction to Web Security Threats</div>
+                            <p>Webinar</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="https://drive.google.com/file/d/11BMdyFMFQ79yXwaXmRKD8iyKiWvF6fjj/view?usp=drive_link" target="_blank">
+                        <figure class="cc-effect"><img src="images\webinars\Webinar11.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">The Future Ecommerce</div>
+                            <p>Webinar</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                      <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="https://drive.google.com/file/d/1LKrjPgE9fpHErGyJmpOOSNXDaK8cQod8/view?usp=drive_link" target="_blank">
+                        <figure class="cc-effect"><img src="images\webinars\Webinar12.png" alt="Image"/>
+                          <figcaption>
+                            <div class="h4">TRECVID: <br>The Video Retrieval <br>Evaluation Benchmark</div>
+                            <p>Webinar</p>
+                          </figcaption>
+                        </figure></a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            
           </div>
+        </div>
 
-          <!-- TNHS -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <p>SY 2008-2012</p>
-                  <div class="h5">High School</div>
+        <!-- Education -->
+        <div class="section" id="education">
+          <div class="container cc-education">
+            <div class="h4 text-center mb-4 title">Education</div>
+            <!-- CVSU -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>College</b></div>
+                    <p>SY 2017-2022</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Talon National High School</div>
-                  <p>Talon, Amadeo, Cavite</b></p>
-                  <p><ul>
-                    <li>
-                      <b>Vice President Role:</b>
-                      <ul>
-                        <li>Organized various initiatives and events as the Vice President of my class.</li>
-                        <li>Collaborated with colleagues and professors to diversify our studies.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Chess Competitions:</b>
-                      <ul>
-                        <li>Actively participated in chess competitions.</li>
-                        <li>Honed strategic thinking skills through competitive chess.</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <b>Scientific Group Projects:</b>
-                      <ul>
-                        <li>Initiated projects with the scientific group.</li>
-                        <li>Polished up skills in strategy making and scientific collaboration.</li>
-                      </ul>
-                    </li>
-                </ul></p>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>Bachelor of Science in Computer Science</div>
+                    <p>Cavite State University - Silang Branch<br>Silang, Cavite</b></p>
+                    <div class="toggle-container">
+                      <a class="toggle-details" onclick="toggleDetails('details11', this)">
+                        Show more
+                        <i class="fas fa-angle-down"></i>
+                      </a>
+                    </div>
+                    <div id="details11" class="details-content">
+                    <p><ul>
+                      <li>
+                        <b>Student Elections Involvement:</b>
+                        <ul>
+                          <li>Participated in COMELEC (Commission on Elections) to organize credible student elections.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Leadership and Financial Expertise:</b>
+                        <ul>
+                          <li>Served as the revered Treasurer in the CSharp school organization.</li>
+                          <li>Sharpened leadership qualities and gained financial expertise through the role.</li>
+                        </ul>
+                      </li>
+                  </ul></p></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- TES -->
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <p>SY 2002-2008</p>
-                  <div class="h5">Elementary School</div>
+            <!-- ICC -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>College</b></div>
+                    <p>SY 2012-2014</p>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>Imus Computer College - Silang Branch</div>
+                    <p>Silang, Cavite</b></p>
+                    <div class="toggle-container">
+                      <a class="toggle-details" onclick="toggleDetails('details12', this)">
+                        Show more
+                        <i class="fas fa-angle-down"></i>
+                      </a>
+                    </div>
+                    <div id="details12" class="details-content">
+                    <p><ul>
+                        <li>
+                          <b>Dual Role: Athlete and Technologist at ICC, Silang Branch, Silang, Cavite</b>
+                          <ul>
+                            <li>Key member of the volleyball and basketball teams</li>
+                            <li>Nurtured enduring relationships and developed a strong sense of team spirit</li>
+                            <li>Honed athletic abilities through active participation in sports</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <b>Hardware and Software Servicing:</b>
+                          <ul>
+                            <li>Ventured into hardware and software servicing during my time at ICC</li>
+                            <li>Utilized endowed skills to tackle complex challenges in computer services</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <b>President of ACTs (Association of Computer Technicians Student):</b>
+                          <ul>
+                            <li>Proudly served as the President of the ACTs at ICC</li>
+                            <li>Facilitated collaboration among students interested in computer technology</li>
+                            <li>Shared expertise and contributed to the growth and development of fellow students</li>
+                            <li>Played a leadership role in advancing the shared passion for technology within the ACTsv</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <b>Well-Rounded Individual:</b>
+                          <ul>
+                            <li>Harmonious blend of athleticism, technological prowess, and leadership</li>
+                            <li>Shaped into an individual with a unique skill set and a penchant for both sports and technology.</li>
+                          </ul>
+                        </li>
+                    </ul></p></div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5"><b>Talon Elementary School</div>
-                  <p>Talon, Amadeo, Cavite</b></p>
-                  <p><ul>
+            </div>
+            <!-- TNHS -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>High School</b></div>
+                    <p>SY 2008-2012</p>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>Talon National High School</div>
+                    <p>Talon, Amadeo, Cavite</b></p>
+                    <div class="toggle-container">
+                      <a class="toggle-details" onclick="toggleDetails('details13', this)">
+                        Show more
+                        <i class="fas fa-angle-down"></i>
+                      </a>
+                    </div>
+                    <div id="details13" class="details-content">
+                    <p><ul>
                       <li>
-                        <b>Sports and Activities:</b>
+                        <b>Vice President Role:</b>
                         <ul>
-                          <li>Actively participated in various sports and activities, showcasing a multifaceted and passionate approach to learning.</li>
+                          <li>Organized various initiatives and events as the Vice President of my class.</li>
+                          <li>Collaborated with colleagues and professors to diversify our studies.</li>
                         </ul>
                       </li>
                       <li>
-                        <b>MTAP (Mathematics Teacher Association of the Philippines) Challenge:</b>
+                        <b>Chess Competitions:</b>
                         <ul>
-                          <li>Enhanced skills in mathematics and analytical reasoning through active involvement in MTAP challenges.</li>
+                          <li>Actively participated in chess competitions.</li>
+                          <li>Honed strategic thinking skills through competitive chess.</li>
                         </ul>
                       </li>
                       <li>
-                        <b>Chess:</b>
+                        <b>Scientific Group Projects:</b>
                         <ul>
-                          <li>Enjoyed chess as a favorite pastime.</li>
-                          <li>Developed skills in tactical thinking, planning, and problem-solving processes.</li>
+                          <li>Initiated projects with the scientific group.</li>
+                          <li>Polished up skills in strategy making and scientific collaboration.</li>
                         </ul>
                       </li>
-                      <li>
-                        <b>Table Tennis:</b>
-                        <ul>
-                          <li>Participated in table tennis, improving body movements and fostering rivalry development.</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <b>Personal Development:</b>
-                        <ul>
-                          <li>These experiences facilitated self-discovery and development of crucial competencies.</li>
-                          <li>Cultivated toughness, ability to work in groups, and persistence.</li>
-                        </ul>
-                      </li>
-                  </ul></p>
+                  </ul></p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- TES -->
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body cc-education-header">
+                    <div class="h5"><b>Elementary School</b></div>
+                    <p>SY 2002-2008</p>
+                  </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body"><br><br>
+                    <div class="h5"><b>Talon Elementary School</div>
+                    <p>Talon, Amadeo, Cavite</b></p>
+                    <div class="toggle-container">
+                      <a class="toggle-details" onclick="toggleDetails('details14', this)">
+                        Show more
+                        <i class="fas fa-angle-down"></i>
+                      </a>
+                    </div>
+                    <div id="details14" class="details-content">
+                    <p><ul>
+                        <li>
+                          <b>Sports and Activities:</b>
+                          <ul>
+                            <li>Actively participated in various sports and activities, showcasing a multifaceted and passionate approach to learning.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <b>MTAP (Mathematics Teacher Association of the Philippines) Challenge:</b>
+                          <ul>
+                            <li>Enhanced skills in mathematics and analytical reasoning through active involvement in MTAP challenges.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <b>Chess:</b>
+                          <ul>
+                            <li>Enjoyed chess as a favorite pastime.</li>
+                            <li>Developed skills in tactical thinking, planning, and problem-solving processes.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <b>Table Tennis:</b>
+                          <ul>
+                            <li>Participated in table tennis, improving body movements and fostering rivalry development.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <b>Personal Development:</b>
+                          <ul>
+                            <li>These experiences facilitated self-discovery and development of crucial competencies.</li>
+                            <li>Cultivated toughness, ability to work in groups, and persistence.</li>
+                          </ul>
+                        </li>
+                    </ul></p></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
-      </div>
-    </div>
     </div>
   </div>
 
@@ -1343,14 +1355,75 @@
     <script src="js/aos.js?ver=1.1.0"></script>
     <script src="scripts/main.js?ver=1.1.0"></script>
     <script>
+     // Function to calculate and display age
       function updateAge() {
           const birthdate = new Date("1996-03-19");
           const currentDate = new Date();
           const age = Math.floor((currentDate - birthdate) / (365.25 * 24 * 60 * 60 * 1000));
-  
-          // Corrected line: Use backticks (`) for template literals
           document.getElementById('age').innerText = `${age} years old`;
       }
+
+      // Function to toggle details visibility and update icons
+      function toggleDetails(detailsId, toggleElement) {
+          var details = document.getElementById(detailsId);
+          if (details.style.display === "none" || details.style.display === "") {
+              details.style.display = "block";
+              toggleElement.innerHTML = 'Hide <i class="fas fa-angle-up"></i>'; // Change to "Hide" with up arrow
+          } else {
+              details.style.display = "none";
+              toggleElement.innerHTML = 'Show more <i class="fas fa-angle-down"></i>'; // Change to "Show" with down arrow
+          }
+      }
+
+      // Event listeners for portfolio links
+      document.querySelectorAll('.portfolio-link').forEach(item => {
+          item.addEventListener('click', event => {
+              // Determine which portfolio link was clicked
+              const clickedLink = event.target.id;
+              
+              // Logic to show content based on the clicked link
+              if (clickedLink === 'school_activity') {
+                  // You can insert code to display school activities content here if needed
+                  console.log("School Activities clicked"); // Debugging line
+              } else if (clickedLink === 'webinars') {
+                  // You can insert code to display webinars content here if needed
+                  console.log("Webinars clicked"); // Debugging line
+              } else if (clickedLink === 'web_development') {
+                  // You can insert code to display web_development content here if needed
+                  console.log("Web Development clicked"); // Debugging line
+              }
+          });
+      });
+
+
+      function changeTab(tabId) {
+          // Hide all tab panes
+          const tabPanes = document.querySelectorAll('.tab-pane');
+          tabPanes.forEach(pane => {
+              pane.style.display = 'none'; // Hide all tab panes
+          });
+
+          // Remove active class from all tabs
+          const navLinks = document.querySelectorAll('.nav-link');
+          navLinks.forEach(link => {
+              link.classList.remove('active'); // Remove active class
+          });
+
+          // Show the selected tab pane
+          document.getElementById(tabId).style.display = 'block'; // Show the selected tab pane
+
+          // Add active class to the clicked tab
+          const clickedTab = Array.from(navLinks).find(link => link.innerText.toLowerCase() === tabId.toLowerCase());
+          if (clickedTab) {
+              clickedTab.classList.add('active'); // Add active class to clicked tab
+          }
+      }
+
+      // Optionally, you can set the default active tab on page load
+      document.addEventListener('DOMContentLoaded', () => {
+          changeTab('portfolio'); // Change 'portfolio' to whichever tab should be active initially
+      });
+
     </script>
   </body>
 </html>
